@@ -31,13 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'rest_framework',
+    'vets',
     'cases',
+    'costs',
+    'diagnosis',
+    'physycal_exam',
+    'lab_exam',
     'django.contrib.staticfiles',
 ]
 
@@ -68,7 +74,7 @@ TEMPLATES = [
         },
     },
 ]
-
+AUTH_USER_MODEL = 'vets.User'
 WSGI_APPLICATION = 'VetSys.wsgi.application'
 
 
@@ -98,12 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+
 ]
 
 
